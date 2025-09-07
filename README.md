@@ -29,8 +29,57 @@ argparse (CLI)
 
 NLTK (tokenization, stopwords)
 
-zxcvbn-python (password strength estimation)
+Steps to Use the Tool
+1. Clone or Download the Repository
+2. git clone https://github.com/Anasch-ch/password-strength-analyzer.git
+cd password-strength-analyzer
 
-tkinter (GUI)
+Set Up Python Environment
 
-os, itertools, re (core Python)
+Make sure Python 3.8+ is installed.
+Create a virtual environment (recommended):
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
+pip install -r requirements.txt
+pip install zxcvbn nltk tkinter argparse
+
+
+Run the Tool
+
+You can run it in CLI mode or GUI mode.
+
+CLI Mode
+python password_analyzer.py --password "MyP@ssw0rd" --name "John" --date "1995" --pet "Rocky" --output wordlist.txt
+
+--password → password to analyze.
+
+--name, --date, --pet → optional inputs for wordlist generation.
+
+--output → save the wordlist to a .txt file.
+
+Example Output:
+
+Password: MyP@ssw0rd
+Strength Score (0-4): 3
+Crack Time (offline fast hash): 3 hours
+Suggestions: Add more unique characters
+
+Wordlist generated → wordlist.txt (45 entries)
+
+
+
+GUI Mode (Tkinter)
+
+Simply run:
+python gui_app.py
+
+You’ll see a window where you can:
+
+Enter a password to check its strength.
+
+Provide personal info (name, date, pet).
+
+Generate and export a wordlist.
+
