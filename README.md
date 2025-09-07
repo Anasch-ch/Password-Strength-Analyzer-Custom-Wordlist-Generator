@@ -50,7 +50,8 @@ Run the Tool
 
 You can run it in CLI mode or GUI mode.
 
-CLI Mode
+#CLI Mode
+
 python password_analyzer.py --password "MyP@ssw0rd" --name "John" --date "1995" --pet "Rocky" --output wordlist.txt
 
 --password → password to analyze.
@@ -70,7 +71,7 @@ Wordlist generated → wordlist.txt (45 entries)
 
 
 
-GUI Mode (Tkinter)
+#GUI Mode (Tkinter)
 
 Simply run:
 python gui_app.py
